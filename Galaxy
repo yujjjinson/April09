@@ -1,0 +1,120 @@
+package senior;
+
+//갤럭시 스토어가 있습니다.
+//이 스토어에 갤럭시10이 5개 있습니다.(가격은 알아서) 
+//갤럭시 노트10이 10개 있습니다.(가격은 알아서)
+//손님이 갤럭시10 1개와 갤럭시 노트10 2개를 구매했습니다.
+//구매후의 손님의 용돈을 출력합니다.
+//(메서드의 오버로딩, this 제어자를 사용합니다.)
+class GalaxyStore {
+	GalaxyStore(){
+		galaxy = new Galaxy10[5];
+		galaxyNote = new GalaxyNote10[10];
+		for(int i=0; i<galaxy.length; i++) {
+			galaxy[i] = new Galaxy10();
+		}
+		for(int i=0; i<galaxyNote.length; i++) {
+			galaxyNote[i] = new GalaxyNote10();
+		}
+	}
+	Galaxy10[] galaxy;
+	GalaxyNote10[] galaxyNote;
+}
+class Galaxy10{
+	int price;
+	Galaxy10(){ price = 900000;}
+}
+class GalaxyNote10{
+	int price;
+	GalaxyNote10(){ price = 1000000;}
+}
+class Guest {
+	int pocketMoney;
+	Guest(int pocketMoney){
+		this.pocketMoney = pocketMoney;
+	}
+	void buy(Galaxy10 g10) {//갤럭시 10구매 메서드
+		pocketMoney = pocketMoney - g10.price;
+	}
+	void buy(GalaxyNote10 gn10) {
+		pocketMoney = pocketMoney - gn10.price;
+	}
+}
+public class Quiz1 {
+	public static void main(String[] args) {
+		GalaxyStore gs = new GalaxyStore();
+		Guest guest = new Guest(2000000);
+		guest.buy(gs.galaxy[0]);//손님이 첫번째 갤럭시10을 구매
+		guest.buy(gs.galaxyNote[1]);//손님이 두번째 갤럭시노트10을 구매
+		System.out.println("용돈잔액:"+guest.pocketMoney);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+또 나는 무엇을 잘못햇는가 
+
+
+
+
+package syj;
+//갤럭시 스토어가 있다. 
+//이 스토어에 갤럭시 10이 5개 있습니다. (*가격은 알아서)
+//갤럭시 노트 10이 10개 있습니다(가격은 알아서)
+//손님이 갤럭시 10 1개와 갤러깃 노트 10, 2개를 구매
+//구매후 손님의 용돈을 출력한다.
+//.매서드의 오버로딩, this 제어자 사용
+
+class GalaxyStore{
+	GalaxyStore(){
+	Gn = new GalaxyNote[10];
+	for(int i=0; i<Gn.length; i++) {
+		Gn[i] = new GalaxyNote();
+	}
+	Gt = new GalaxyTen[5];
+	for(int i=0; i<Gt.length; i++) {
+		Gt[i] = new GalaxyTen(); 
+		}
+	}
+	GalaxyTen[] Gt;
+	GalaxyNote[] Gn;
+}
+class GalaxyTen{
+	int price;
+	GalaxyTen(){price = 2500000;}
+}
+class GalaxyNote{
+	int price;
+	GalaxyNote(){price = 3500000;}
+}
+class Customer{
+	int money;
+	Customer(int money){this.money = money;}
+	void buy(GalaxyTen Galaxy) {money = money - (2*GalaxyTen.}
+	void buy(GalaxyNote Galaxy) {}
+}
+
+
+
+
+public class Study01 {
+
+}
