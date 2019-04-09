@@ -1,0 +1,146 @@
+난 대체 왜 틀린걸까 전부 왜 엑스박스인가?
+
+
+package syj;
+//메서드 오버로딩
+//메서드의 이름을 동일하게 작성할수있따.
+//단, 매서드의 매개변수의 객수가 달아야 한다.
+//매개변수의 갯수가 동일해도, 매개변수의 데이터 형태가 달라야 한다.
+//자바 영화관이 있다. 이 영화관에는 러브레터영화 티켓이 5장있다.
+//쉘위댄스 영화 티켓이 10장잇다.
+//영화광이 러브레터 티켓과 쉘위댄스 티켓을 구매한다. 
+class MovieHolic{
+	int pocketmoney;//영화표 살 돈 넣기
+	MovieHolic(int pocketMoney){
+		this.pocketmoney = pocketMoney;
+	}
+	//러브레터 구매 
+	void buyLoveLetterTicket() {
+		pocketMoney = pocketMoney - ticket.price;
+	}
+	//쉘위 댄스 티켓 구매
+	void buyLoveLetterTicket(ShallWeDanceTicket ticket) {
+		pocketMoney = po
+	}
+}
+
+class JavaCinema{
+	JavaCinema(){
+	11t = new LoveLetterTicket[5];
+	for(int i=0; i<11t.length; i++)
+		11t[i] = new LoveLetterTicket();}
+	LoveLetterTicket[] 11t;
+	ShallWeDanceTicket[]swt;
+}
+class LoveLetterTicket{
+int price ;
+LoveLetterTicket() {
+	price = 10000;
+}
+
+}
+class ShallWeDanceTicket{
+	int price ; 
+	ShallWeDanceTicket(){
+		price = 12000;
+	}
+}
+
+public class Study01 {
+
+}
+
+
+
+
+
+
+
+
+
+내가 틀린걸 비교해보자
+
+
+
+
+
+
+
+
+
+package senior;
+
+//메서드의 오버로딩(overloading)
+//메서드의 이름을 동일하게 작성할 수 있다.
+//단, 메서드의 매개변수의 갯수가 달아야 한다.
+//	  매개변수의 갯수가 동일해도, 매개변수의 데이터 형태가 달라야 한다.
+
+//자바 영화관이 있습니다. 
+//이 영화관에 러브레터영화 티켓이 5장있습니다.티켓의 가격은 만원입니다.
+//쉘위댄스영화 티켓이 10장 있습니다.이 티켓의 가격은 만이천원입니다.
+//영화광이 러브레터 티켓과 쉘위댄스 티켓을 구매합니다.
+//(메서드의 오버로딩과 this 제어자를 적용해서 설계합니다.)
+class MovieHolic {//영화광
+	int pocketMoney;//용돈
+	MovieHolic(int pocketMoney){
+		this.pocketMoney = pocketMoney;
+	}
+	//러브레터티켓 구매
+	void buy(LoveLetterTicket ticket) {
+		pocketMoney = pocketMoney - ticket.price;
+	}
+	//쉡위댄스 티켓 구매
+	void buy(ShallWeDanceTicket ticket) {
+		pocketMoney = pocketMoney - ticket.price;
+	}
+}
+class JavaCinema {
+	JavaCinema(){
+		llt = new LoveLetterTicket[5];
+		for(int i=0; i<llt.length; i++) {
+			llt[i] = new LoveLetterTicket();
+		}
+		swt = new ShallWeDanceTicket[10];
+		for(int i=0; i<swt.length; i++) {
+			swt[i] = new ShallWeDanceTicket();
+		}
+	}
+	LoveLetterTicket[] llt; 
+	ShallWeDanceTicket[] swt;
+}
+class LoveLetterTicket {
+	int price;//가격
+	LoveLetterTicket(){
+		price = 10000;
+	}
+}
+class ShallWeDanceTicket {
+	int price;//가격
+	ShallWeDanceTicket(){
+		price = 12000;
+	}
+}
+
+public class Study2 {
+	public static void main(String[] args) {
+		MovieHolic madman = new MovieHolic(50000);//오만원소유영화광
+		JavaCinema cinema = new JavaCinema();//자바영화관
+		madman.buy(cinema.llt[0]);//러브레터티켓 중 첫번째 티켓 구매
+		madman.buy(cinema.swt[0]);//쉘위댄스티켓 중 첫번째 티켓 구매
+		System.out.println("용돈잔액:"+madman.pocketMoney);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
